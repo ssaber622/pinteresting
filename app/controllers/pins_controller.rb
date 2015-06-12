@@ -3,6 +3,10 @@ class PinsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
   before_action :correct_user, only: [:edit, :update, :destroy]
   
+attr_accessor :photo_file_name
+attr_accessor :photo_content_type
+attr_accessor :photo_file_size
+attr_accessor :photo_updated_at
  
   def index
     @pins = Pin.all
