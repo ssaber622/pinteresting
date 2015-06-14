@@ -9,7 +9,7 @@ attr_accessor :photo_file_size
 attr_accessor :photo_updated_at
  
   def index
-    @pins = Pin.all
+    @pins = Pin.all.order ("created_at DESC")
   end
 
   
