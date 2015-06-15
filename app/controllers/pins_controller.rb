@@ -50,7 +50,7 @@ attr_accessor :photo_updated_at
  
   def destroy
     @pin.destroy
-      redirect_to pins_url, notice: 'Pin was successfully destroyed.' 
+      redirect_to pins_url, notice: 'Pin was successfully deleted.' 
   end
 
   private
